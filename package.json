@@ -12,7 +12,9 @@
     "build:abi": "forge build && cp out/Counters.sol/Counters.json engine/pcs/abi",
     "build:docker": "docker build -t ghcr.io/therealbytes/concrete-template-geth:v0.0.1 .",
     "test": "yarn test:go",
-    "test:go": "go test -v ./... || true"
+    "test:go": "go test -v ./... || true",
+    "call:get": "cast call 0x0000000000000000000000000000000000000080 'get(uint256)' 0 --rpc-url http://localhost:9545",
+    "call:inc": "cast send 0x0000000000000000000000000000000000000080 'increment(uint256)' 0 --rpc-url http://localhost:9545 --private-key 0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6"
   },
   "devDependencies": {
     "forge-std": "https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3"
