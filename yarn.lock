@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"ds-test@https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084":
+  version "1.0.0"
+  resolved "https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084"
+
 "forge-std@https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3":
   version "1.2.0"
   resolved "https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3"

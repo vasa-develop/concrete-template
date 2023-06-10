@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "yarn build:abi",
+    "prepare": "yarn build:abi && yarn fetch:interface",
+    "fetch:interface": "curl -o ./sol/PrecompileRegistry.sol https://raw.githubusercontent.com/therealbytes/concrete-geth/30a1867e924672b4ec9d0b533f92fb5937314187/concrete/precompiles/sol/PrecompileRegistry.sol",
     "build:abi": "forge build && cp out/Counters.sol/Counters.json engine/pcs/abi",
     "build:docker": "docker build -t ghcr.io/therealbytes/concrete-template-geth:v0.0.1 .",
     "test": "yarn test:go",
@@ -17,6 +18,7 @@
     "call:inc": "cast send 0x0000000000000000000000000000000000000080 'increment(uint256)' 0 --rpc-url http://localhost:9545 --private-key 0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6"
   },
   "devDependencies": {
-    "forge-std": "https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3"
+    "forge-std": "https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3",
+    "ds-test": "https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084"
   }
 }

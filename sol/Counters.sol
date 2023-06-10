@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// The address the precompile will be mapped to.
-address constant COUNTERS_ADDRESS = address(0x80);
-
-interface Counters {
+interface ICounters {
     // Increment the counter for the given id, and return the new value.
     function increment(uint256 id) external returns (uint256);
 
