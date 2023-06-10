@@ -6,15 +6,21 @@ This is a simple template for projects using the Concrete framework.
 
 ```bash
 ├── engine
-│   ├── main.go                 # Chain setup
-│   ├── main_test.go            # Minimal setup test
-│   ├── pcs
-│   │   ├── abi
-│   │   │   └── Counters.json   # Precompile ABI created by `yarn build:abi`
-│   │   ├── counters.go         # Example precompile
-│   │   └── counters_test.go    # Precompile test
+│   ├── main.go                             # Chain setup
+│   ├── main_test.go                        # Minimal setup test
+│   └── pcs
+│       ├── abi
+│       │   └── Counters.json               # Precompile ABI created by `yarn build:abi`
+│       ├── counters.go                     # Example precompile
+│       └── counters_test.go                # Precompile test
 └── sol
-    └── Counters.sol            # Precompile interface in Solidity
+    ├── Counters.sol                        # Precompile interface in Solidity
+    ├── Counters_EVM.sol                    # Solidity implementation of the precompile
+    ├── Counters_Introspective.sol          # Introspective version of the precompile
+    ├── PrecompileIntrospector.sol          # Introspection utility
+    ├── PrecompileRegistry.sol              # Precompile registry interface
+    └── test
+        └── Counters_Introspective.test.sol # Introspective implementation test
 ```
 
 ## Running a devnet
