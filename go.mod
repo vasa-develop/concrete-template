@@ -2,7 +2,7 @@ module github.com/therealbytes/concrete-template
 
 go 1.19
 
-replace github.com/ethereum/go-ethereum => github.com/therealbytes/concrete-geth v0.0.0-20230607175408-30a1867e9246
+replace github.com/ethereum/go-ethereum => github.com/therealbytes/concrete-geth v0.0.0-20230703204530-a83b3d00a54b
 
 require github.com/ethereum/go-ethereum v1.11.6
 
